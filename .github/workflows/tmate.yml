@@ -23,7 +23,10 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GH_TOKEN }}
-
+    - name: Setup Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
     - name: 🐍 Tạo file VPS info
       run: |
         mkdir -Force links
